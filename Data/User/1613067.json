@@ -1,0 +1,158 @@
+{
+    "id": 1613067,
+    "nickname": "hoangcuongdam",
+    "name": "Bùi Ngô Minh Hoàng",
+    "avatar": "buingominhhoang.jpg",
+    "phone": "0984976847",
+    "address": "Tiền Giang",
+    "email": "akirmasterxyz@gmail.com",
+    "degree": {
+        "faculty": "Vật Lý Học",
+        "school": "Đại Học Khoa Học Tự Nhiên",
+        "specialization": "Vật lý điện tử"
+    },
+    "friend": [
+        "1613036"
+    ],
+    "follow": [
+        "1613036"
+    ],
+    "private": {
+        "ip": "0.0.0.0",
+        "device": [
+            "Android",
+            "Laptop"
+        ],
+        "lastest": {
+            "day": "27",
+            "month": "1",
+            "year": "2019",
+            "second": "3",
+            "minute": "7",
+            "hour": "23"
+        },
+        "viewedPost": [
+            "1613036_nude"
+        ],
+        "philosophyTag": {},
+        "mathTag": {
+            "algebra": 0,
+            "geometry": 0,
+            "vector": 0,
+            "calculus": 0,
+            "analysis": 0,
+            "space": 0,
+            "linearAlgebra": 0,
+            "topo": 0
+        },
+        "scienceTag": {
+            "physic": {
+                "applicationPhysic": 0,
+                "theoryPhysic": 0,
+                "astroPhysic": 0,
+                "quantumPhysic": 0,
+                "classicalPhysic": 0,
+                "relativityPhysic": 0,
+                "solidPhysic": 0,
+                "bioPhysic": 0,
+                "nuclearPhysic": 0,
+                "computerPhysic": 0,
+                "electricsPhysic": 0,
+                "geographyPhysic": 0,
+                "oceanPhysic": 0,
+                "magneticsPhysic": 0,
+                "mechanicsPhysic": 0,
+                "opticsPhysic": 0
+            },
+            "chemistry": {},
+            "biology": {},
+            "computer": {},
+            "data": {},
+            "material": {},
+            "infomation": {}
+        },
+        "engineeringTag": {
+            "IT": {
+                "programingLanguage": {
+                    "nodejs": 0,
+                    "php": 0,
+                    "python": 0,
+                    "c": 0,
+                    "cpp": 0,
+                    "java": 0,
+                    "c#": 0,
+                    "swift": 0,
+                    "kotlin": 0,
+                    "objectC": 0,
+                    "pascal": 0,
+                    "javascript": 0
+                },
+                "markLanguage": {
+                    "html": 0,
+                    "css": 0,
+                    "xml": 0,
+                    "latex": 0
+                }
+            },
+            "SoftWare": 0,
+            "HardWare": 0,
+            "WebApplication": 0,
+            "MobileApplication": 0,
+            "DesktopApplication": 0,
+            "Server": 0,
+            "Automatic": 0,
+            "PCL": 0,
+            "Robotic": 0,
+            "MicroElectric": 0,
+            "Telecom": 0,
+            "Mechanical": 0,
+            "MechanicalElectric": 0,
+            "MechanicalMaterial": 0,
+            "DesignMachine": 0,
+            "SystemMachine": 0,
+            "DesignGraphic": 0,
+            "Architech": 0,
+            "PetroTechnical": 0,
+            "GeographyTechnical": 0,
+            "TechnicalDrawing": 0
+        },
+        "techTag": {
+            "IT": {
+                "blockchain": 0,
+                "ar_vr": 0,
+                "bigdata": {
+                    "dataStatistics": 0,
+                    "dataVisualize": 0,
+                    "dataMining": 0,
+                    "hashMap": 0
+                },
+                "ai": {
+                    "deepLearning": 0,
+                    "machineLearning": 0,
+                    "": ""
+                },
+                "iot": {
+                    "raspberryPi": 0,
+                    "arduino": 0,
+                    "orangePi": 0
+                },
+                "server": {
+                    "nginx": 0,
+                    "apache": 0
+                },
+                "git": {
+                    "github": 0
+                }
+            }
+        },
+        "socialtag": {
+            "Game": 0,
+            "Drum": 0,
+            "Bussiness": 0,
+            "Karaoke": 0,
+            "Bank": 0,
+            "Comic": 0,
+            "Video": 0
+        }
+    }
+}

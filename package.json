@@ -1,0 +1,14 @@
+{
+  "name": "qumallserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ServerProcessing/processing.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "mongodb": "^3.1.13"
+  }
+}

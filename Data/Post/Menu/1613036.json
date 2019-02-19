@@ -1,0 +1,50 @@
+{
+    "author":{
+        "nickname":"hoangcuongdam",
+        "name":"Bùi Ngô Minh Hoàng",
+        "link":"/hoangcuongdam-storage-post",
+        "avatar": "/hoangcuongdam/storage/xlsa.jpg"
+    },
+    "title": "Hướng dẫn chơi gái trong Vật lý điện tử",
+    "id":"huong-dan-choi-gai-trong-vat-ly-dien-tu",
+    "id_post": "1000003",
+    "subtitle": [
+        {
+            "title": "Chương 1: Phải đẹp trai",
+            "id_post": "1000003",
+            "id": {
+                "index": 0,
+                "target": "chuong-1-phai-dep-trai"
+            },
+            "submenu": [
+                {
+                    "title": "1. Đẹp trai là có nhiều gái theo.",
+                    "id_post": "1000003",
+                    "id": "1-dep-trai-la-co-nhieu-gai-theo",
+                    "id_target": "1000003-1-dep-trai-la-co-nhieu-gai-theo"
+                },
+                {
+                    "title": "2.Biết gạ chịch.",
+                    "id": "2-biet-ga-chich",
+                    "id_post": "1000003",
+                    "id_target":"1000003-2-biet-ga-chich"
+                }
+            ]
+        },
+        {
+            "title": "Chương 2.",
+            "id_post": "1000003",
+            "id": {
+                "index": 1,
+                "target": "chuong-2"
+            },
+            "submenu": [
+                {}
+            ]
+        }
+    ],
+    "comment": {
+        "ducaloneking": "Dâm tặc, súc vật đ k m.",
+        "bé Võ Thị Như X": "Thứ khốn nạn."
+    }
+}
