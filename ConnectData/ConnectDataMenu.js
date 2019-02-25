@@ -7,10 +7,10 @@ ConnectDataMenu.isValid = () => {
     } else return true;
 }
 
-ConnectDataMenu.getOne = async (where) => {
+ConnectDataMenu.getOne = async (where,collection) => {
     try {
-        var db = await ConnectDataMenu.dbColection.Get();
-        var result = await db.collection(ConnectDataMenu.collection).findOne(where);
+        var db = await ConnectDataMenu.dbCollection.Get();
+        var result = await db.collection(collection).findOne(where);
         ConnectDataMenu.signIn = result;
         console.log(result);
         return result;

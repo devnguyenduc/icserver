@@ -1,48 +1,42 @@
 var MongoClient = require('mongodb').MongoClient;
 
-class dbConnection {
-    constructor(){
-        this.db = null;
-        this._dbase = null;
-        this.error = "Can't connect this database";
-        this.instance = 0;
-    }
-    setUrl(_url){
-        this.url = _url;
-    }
-    setDb(_db){
-        this._db = _db;
-    }
-    setConnect(_url,_db){
-        this.url = _url;
-        this._db = _db;
-    }
-    async dbConnect(){
-        try{
-            this._dbase = await MongoClient.connect(this.url);
-            return this._dbase.db(this._db);
-        }catch(e){
-            console.log(e);
-            return this.error;
-        }
-    }
-    async Get(){
+var DbConnection = function () {
+    var db = null
+    var instance = 0
+    async function DbConnect() {
         try {
-            this.instance++;
-            console.log(`Times call DB:${this.instance}`);
-            if(this.db != null){
-                console.log("Database have aldready connected !!!");
-                return this.db;
-            }else{
-                console.log("Create a New Database");
-                this.db = await this.dbConnect();
-                return this.db;
-            }
-        }catch(e){
-            console.log(e);
-            return this.error;
+            //var url = `mongodb://localhost:27017`
+            var url=`mongodb://admin:revivalsand97@ds247698.mlab.com:47698/incloudproject`
+            var _db = await MongoClient.connect(url)
+            //return _db.db(`Ban_Dien_thoai`)
+            return _db.db(`incloudproject`)
+        } catch (Loi) {
+            return Loi
         }
+    }
+
+    async function Get() {
+        try {
+            instance++
+            console.log(`số lượng gọi đến kết nối CSDL: ${instance} lần`)
+
+            if (db != null) {
+                console.log(`kết nối CSDL đã tồn tại`)
+                return db
+            } else {
+                console.log(`tạo một kết nối CSDL mới`)
+                db = await DbConnect()
+                return db
+            }
+        } catch (Loi) {
+            return Loi
+        }
+    }
+
+    return {
+        Get: Get
     }
 }
 
-module.exports = new dbConnection;
+
+module.exports = DbConnection();

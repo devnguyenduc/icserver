@@ -15,6 +15,8 @@
 // const db = ".json";
 //Function 
 
+var DbCollection = require("../ConnectData/ConnectMongoDB");
+
 function decodeBase64(dataString) {
     var matches = dataString.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/),
         response = {};
@@ -31,21 +33,14 @@ function decodeBase64(dataString) {
 
 class ConnectData {
     constructor() {
-        this.collection = "";
         this.error = "null";
         this.success = "ok";
         this.signIn = null;
-        this.dbColection = "";
-    }
-    setDbCollection(db){
-        this.dbColection = db;
-    }
-    setCollection(collection){
-        this.collection = collection;
+        this.dbCollection = DbCollection;
     }
     async createCollections(new_collection){
         try{
-            var db = await this.dbColection.Get();
+            var db = await this.dbCollection.Get();
             db.createCollection(new_collection,(err,res)=>{
                 if(err){
                     console.log(err);
@@ -60,15 +55,15 @@ class ConnectData {
     }
 
     // Đọc danh sách tất cả người dùng
-    async get() {
+    async get(collec) {
         try {
-            var db = await this.dbColection.Get();
-            var result = await db.collection(this.collection).find({}).toArray();
+            var db = await this.dbCollection.Get();
+            var result = await db.collection(collec).find({}).toArray();
             return result;
         } catch (e) {
             console.log("=============================ERROR=============================");
             console.log(e);
-            console.log("=============================ERROR=============================");
+            console.log("==============================END==============================");
             return this.error;
         }
     }
@@ -76,10 +71,10 @@ class ConnectData {
         return this.success;
     }
     // Đọc 1 trong database;
-    async gets(where){
+    async gets(where,collec){
         try{
-            var db = await this.dbColection.Get();
-            var result = await db.collection(this.collection).find(where).toArray();
+            var db = await this.dbCollection.Get();
+            var result = await db.collection(collec).find(where).toArray();
             return result;
         }catch(e){
             console.log("=============================ERROR=============================");
@@ -89,10 +84,10 @@ class ConnectData {
         }
     }
     // Tạo 1 tài khoản vào cơ sở dữ liệu
-    async create(where){
+    async create(where,collec){
         try{
-            var db = await this.dbColection.Get();
-            var result = await db.collection(this.collection).insert(where);
+            var db = await this.dbCollection.Get();
+            var result = await db.collection(collec).insert(where);
             return this.success;
         }catch(e){
             console.log("=============================ERROR=============================");
@@ -104,10 +99,10 @@ class ConnectData {
 
     // Sử dụng hàm tổng quát để xây dựng tính năng update cho database. Cần 1 hàm con để mô tả
     // từng tính năng một.
-    async update(data,newData){
+    async update(data,newData,collec){
         try{
-            var db = await this.dbColection.Get();
-            var result = await db.collection(this.collection).update(data,newData);
+            var db = await this.dbCollection.Get();
+            var result = await db.collection(collec).update(data,newData);
             return this.success;
         }catch(e){
             console.log("=============================ERROR=============================");
@@ -115,14 +110,13 @@ class ConnectData {
             console.log("=============================ERROR=============================");
             return this.error;
         }
-        
     }
     
     //Tương tự như hàm update.
-    async remove(data){
+    async remove(data,collec){
         try{
-            var db = await this.dbColection.Get();
-            var result = await db.collection(this.collection).remove(data);
+            var db = await this.dbCollection.Get();
+            var result = await db.collection(collec).remove(data);
             return this.success;
         }catch(e){
             console.log("=============================ERROR=============================");
