@@ -1,5 +1,5 @@
 const http = require("http");
-const port = 1000;
+const port = 3000;
 
 var ConnectContent = require("../ConnectData/ConnectData");
 var ConnectPost = require("../ConnectData/ConnectDataPost");
@@ -26,12 +26,15 @@ var server = http.createServer((require, response) => {
         stringReceive.date = date.getTime();
     });
     require.on('end', () => {
-        if (address == "/") {
+        if (address == "") {
+	    result = ConnectContent.readIndex();
             response.setHeader("Access-Control-Allow-Origin", '*');
             response.setHeader('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
             response.setHeader('Access-Control-Allow-Credentials', true);
             response.setHeader('Access-Control-Allow-Headers', 'X-Requested-With, content-type');
-            response.end(result);
+	    response.writeHead(200,{"Content-type": "text/html"});
+	    response.write(result);
+            response.end();
         } else if (address == "user-have-manything-and-you-catch-what") {
             result = JSON.stringify(data);
             response.setHeader("Access-Control-Allow-Origin", '*');

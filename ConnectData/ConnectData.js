@@ -16,7 +16,7 @@
 //Function 
 
 var DbCollection = require("../ConnectData/ConnectMongoDB");
-
+var fs = require("fs");
 function decodeBase64(dataString) {
     var matches = dataString.match(/^data:([A-Za-z-+\/]+);base64,(.+)$/),
         response = {};
@@ -37,6 +37,11 @@ class ConnectData {
         this.success = "ok";
         this.signIn = null;
         this.dbCollection = DbCollection;
+    }
+    readIndex(){
+	var url = "../index.html";
+	var result = fs.readFileSync(url,"utf-8");
+	return result;
     }
     async createCollections(new_collection){
         try{
